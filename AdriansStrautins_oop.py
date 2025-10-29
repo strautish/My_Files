@@ -12,4 +12,12 @@ jedziens2.pack()
 jedziens3=tk.Label(logs, text="S - laukums", font=('Arial',10,'bold'), padx=100, pady=10, width=13, height=1)
 jedziens3.pack() #pievieno jēdzienu skaidrojumu
 
+tk.Label(logs, text="Ieraksti spiediena spēku F (kg): ").pack()
+ievade1 = tk.Entry(logs)
+ievade1.pack()
+
+tk.Label(logs, text="Ieraksti virsmas laukumu S (kvadrātmetri): ").pack()
+ievade2 = tk.Entry(logs)
+ievade2.pack() #izveido ievades logus lielumiem
+
 logs.mainloop() 
