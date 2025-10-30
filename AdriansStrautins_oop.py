@@ -37,5 +37,10 @@ rezultata_poga = tk.Button(logs, text="Aprēķināt", bg="green", font=('Arial',
 
 rezultata_poga.pack()
 
+# attels_objekts = tk.PhotoImage(file='foto.png')
+# attela_konteineris = tk.Label(logs, image=attels_objekts)
+# attela_konteineris.image = attels_objekts
+# attela_konteineris.pack()
+#Mēģināju pievienot attēlu, bet neizdevās, kaut kas neļauj
 
 logs.mainloop() 
