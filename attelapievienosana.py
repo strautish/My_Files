@@ -28,4 +28,4 @@ ievade2.pack(pady=10)
 poga=tk.Button(logs, text="Saskaitīt", command=saskaita)
 poga.pack(pady=10)
 
-logs.mainloop
+logs.mainloop()

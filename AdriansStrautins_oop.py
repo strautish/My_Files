@@ -7,11 +7,11 @@ logs.title("Spiediena aprēķins") #loga nosaukums
 logs.geometry("500x500+700+300") #loga koordinātas un izmērs
 logs.resizable(True,True) #loga izmēra maiņa
 
-jedziens1=tk.Label(logs, text="p - Spiediens", font=('Arial',10,'bold'), padx=100, pady=10, width=13, height=1)
+jedziens1=tk.Label(logs, text="p - Spiediens", font=('Arial',14,'bold'), padx=100, pady=10, width=13, height=1)
 jedziens1.pack() #pievieno jēdzienu skaidrojumu
-jedziens2=tk.Label(logs, text="F - Spiediena spēks", font=('Arial',10,'bold'), padx=100, pady=10, width=13, height=1)
+jedziens2=tk.Label(logs, text="F - Spiediena spēks", font=('Arial',14,'bold'), padx=100, pady=10, width=13, height=1)
 jedziens2.pack() #pievieno jēdzienu skaidrojumu
-jedziens3=tk.Label(logs, text="S - Laukums", font=('Arial',10,'bold'), padx=100, pady=10, width=13, height=1)
+jedziens3=tk.Label(logs, text="S - Laukums", font=('Arial',14,'bold'), padx=100, pady=10, width=13, height=1)
 jedziens3.pack() #pievieno jēdzienu skaidrojumu
 
 tk.Label(logs, text="Ieraksti spiediena spēku F (ņūtoni): ", font=('Arial',10,'bold') ).pack()
@@ -33,9 +33,9 @@ def rezultats(): #funkcija
         messagebox.showinfo("Spiediena rezultāts", "Nevar dalīt ar nulli") #dalīšana ar nulli kļūda
     messagebox.showinfo("Spiediena rezultāts", f"Spiediens:{sum} paskāli") 
 
-rezultata_poga = tk.Button(logs, text="Dalīt", bg="green", command=rezultats) #rezultāta poga
-
+rezultata_poga = tk.Button(logs, text="Aprēķināt", bg="green", font=('Arial', 14, 'bold'), command=rezultats) #rezultāta poga
 
 rezultata_poga.pack()
+
 
 logs.mainloop() 
