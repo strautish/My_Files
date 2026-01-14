@@ -1,0 +1,16 @@
+
+import json
+# Load titanic.json data
+with open('titanic.json', 'r', encoding='utf-8') as f:
+    titanic_data = json.load(f)
+
+# Display information about the data
+print(f"Total records: {len(titanic_data)}")
+print(f"\nFirst record example:")
+print(titanic_data[0])
+
+# Example: Count survivors
+survivors = sum(1 for record in titanic_data if record.get('Survived') == 1)
+deaths = sum(1 for record in titanic_data if record.get('Survived') == 0)
+print(f"\nSurvivors: {survivors}")
+print(f"Deaths: {deaths}")
