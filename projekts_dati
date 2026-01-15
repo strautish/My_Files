@@ -1,16 +1,55 @@
 
 import json
-# Load titanic.json data
+
 with open('titanic.json', 'r', encoding='utf-8') as f:
     titanic_data = json.load(f)
 
-# Display information about the data
-print(f"Total records: {len(titanic_data)}")
-print(f"\nFirst record example:")
-print(titanic_data[0])
+def visi():
+    print("Kopējais pasažieru skaits:", len(titanic_data))
 
-# Example: Count survivors
-survivors = sum(1 for record in titanic_data if record.get('Survived') == 1)
-deaths = sum(1 for record in titanic_data if record.get('Survived') == 0)
-print(f"\nSurvivors: {survivors}")
-print(f"Deaths: {deaths}")
+def izdzivojusie():
+    izdzivojusie = [p for p in titanic_data if p['Survived'] == 1]
+    print("Izdzīvojušo pasažieru skaits:", len(izdzivojusie))
+
+def mirusie():
+    mirusie = [p for p in titanic_data if p['Survived'] == 0]
+    print("Mirušo pasažieru skaits:", len(mirusie))
+
+def viriesi():
+    viriesi = [p for p in titanic_data if p['Sex'] == 'male']
+    print("Vīriešu pasažieru skaits:", len(viriesi))
+
+def sievietes():
+    sievietes = [p for p in titanic_data if p['Sex'] == 'female']
+    print("Sieviešu pasažieru skaits:", len(sievietes))
+
+
+
+   
+while True:
+    print("Izvēlne:")
+    print("1. Parādīt pasažieru skaitu")
+    print("2. Parādīt izdzīvojušo pasažieru skaitu")
+    print("3. Parādīt mirušo pasažieru skaitu")
+    print("4. Parādīt vīriešu dzimuma pasažieru skaitu")
+    print("5. Parādīt sieviešu dzimuma pasažieru skaitu")
+
+    izvele = input("Ievadiet savu izvēli (1-5):").strip()
+
+    if izvele == '1':
+        visi()
+
+    elif izvele == '2':
+        izdzivojusie()
+
+    elif izvele == '3':
+        mirusie()
+
+    elif izvele == '4':
+        viriesi()
+
+    elif izvele == '5':
+        sievietes()
+            
+    else:
+        break
